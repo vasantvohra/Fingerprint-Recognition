@@ -1,0 +1,29 @@
+
+#{% for image_name in images %}
+#{% if flag is not none: %}
+	<p><label name='result'> Output images: {{image_name}}</label><br /></p>
+		<img class="img-responsive" src="{{url_for('send_image', filename=image_name)}}" alt=" " />
+	<!img class="img-responsive" src="../static/img/candidate.png" alt=" " />
+	<!-- img src="../staic/img/{.png" alt=" " />
+	<img src="../staic/img/candidate.png" alt=" " />
+	<!-- img src="../staic/img/clahe.png" alt=" " />
+	<img src="../staic/img/enhance.png" alt=" " />
+	<img src="../staic/img/normalize.png" alt=" " />
+	<img src="../staic/img/Skeltonize.png" alt=" " />
+	<img src="../staic/img/keypoints.png" alt=" " />
+	<img src="../staic/img/candidate.png" alt=" " />
+	<img src="../staic/img/c_clahe.png" alt=" " />
+	<img src="../staic/img/c_enhance.png" alt=" " />
+	<img src="../staic/img/c_normalize.png" alt=" " />
+	<img src="../staic/img/c_Skeltonize.png" alt=" " />
+	<img src="../staic/img/c_keypoints.png" alt=" " />
+	<img src="../staic/img/Keypoints_match.png" alt=" " / -->
+#{% endif %}
+
+	<img src="../static/img/original.png" alt=" " />
+	<img src="../static/img/candidate.png" alt=" " />
+
+{% for image_name in images %}
+<p><label name='output'> Output images: {{image_name}}</label><br /></p>
+
+		<img class="img-responsive" src="{{url_for('static', filename='original.png')}}" onload="imgonload(this); alt=" " />

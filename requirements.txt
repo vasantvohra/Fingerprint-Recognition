@@ -8,3 +8,5 @@ requests==2.23.0
 json
 flask
 scipy==1.4.1
+matplotlib==3.2.1
+Pillow==7.1.1

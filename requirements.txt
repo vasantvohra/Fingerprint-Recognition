@@ -5,7 +5,6 @@ opencv-contrib-python==4.2.0.34
 opencv-python==4.2.0.32
 scikit-image==0.16.2
 requests==2.23.0
-json
 flask
 scipy==1.4.1
 matplotlib==3.2.1

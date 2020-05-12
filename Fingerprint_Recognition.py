@@ -131,6 +131,7 @@ def get_descriptors(img):
     img1 = img * 255
     a = "CLAHE" + str(i) 
     # cv2.imshow("Clahe",img)
+    cv2.imwrite(f"./static/img/{a}.png",img1)
     
     # Enhance image
     img = image_enhance.image_enhance(img)
@@ -138,6 +139,7 @@ def get_descriptors(img):
     # cv2.imshow("enhance",255*img)    
     img2 = img*255
     b = "Enhance" + str(i)
+    cv2.imwrite(f"./static/img/{b}.png",img1)
     
     # Threshold
     ret, img = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)
@@ -146,7 +148,8 @@ def get_descriptors(img):
     img3 = img
     c = "Normalize" + str(i)
     # cv2.imshow("Threshold",img)
-    
+    cv2.imwrite(f"./static/img/{c}.png",img1)
+
   #  plot_figure(img1,img2,img3,a,b,c)
     
     #Skeleton & Thinning
@@ -229,6 +232,7 @@ def get_descriptors2(img):
 
 
 def verify(img1,img2):
+    i = random.randint(0,1000) 
     img1 = cv2.imread(img1,0)
 #    print("Original Image")
     kp1,des1 = get_descriptors(img1)
@@ -240,15 +244,15 @@ def verify(img1,img2):
    # Plot keypoints
 #    print("plotting on original images and match")
     img4 = cv2.drawKeypoints(img1, kp1, outImage=None)
-    a = "Original Keypoints"
+    a = "Original Keypoints" + str(i)
     cv2.imwrite(f"./static/img/{a}.png",img4)
 
     img5 = cv2.drawKeypoints(img2, kp2, outImage=None)
-    b = "Candidate Keypoints"
+    b = "Candidate Keypoints" + str(i)
     cv2.imwrite(f"./static/img/{b}.png",img5)
 
     img6 = cv2.drawMatches(img1, kp1, img2, kp2, matches, flags=2, outImg=None)
-    c = "Match"
+    c = "Match" + str(i)
     cv2.imwrite(f"./static/img/{c}.png",img6)
 
  #   plot_figure(img4,img5,img6,a,b,c)
@@ -260,9 +264,9 @@ def verify(img1,img2):
     score_threshold = 36
     s = (score/len(matches) )
     if score/len(matches) < score_threshold:
-        return (f"Fingerprint matches with Avg. Score = {s} when Threshold = {score_threshold}")
+        return (f"Fingerprint matches with Avg. Difference Score = {s} when Threshold = {score_threshold}")
     else:
-        return(f"Fingerprint does not match with Avg. Score = {s} when Threshold = {score_threshold}")
+        return(f"Fingerprint does not match with Avg. Difference Score = {s} when Threshold = {score_threshold}")
 
 
 # ### 1:1 Match

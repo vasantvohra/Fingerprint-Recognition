@@ -139,7 +139,7 @@ def get_descriptors(img):
     # cv2.imshow("enhance",255*img)    
     img2 = img*255
     b = "Enhance" + str(i)
-    cv2.imwrite(f"./static/img/{b}.png",img1)
+    cv2.imwrite(f"./static/img/{b}.png",img2)
     
     # Threshold
     ret, img = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)
@@ -148,7 +148,7 @@ def get_descriptors(img):
     img3 = img
     c = "Normalize" + str(i)
     # cv2.imshow("Threshold",img)
-    cv2.imwrite(f"./static/img/{c}.png",img1)
+    cv2.imwrite(f"./static/img/{c}.png",img3)
 
   #  plot_figure(img1,img2,img3,a,b,c)
     

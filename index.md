@@ -9,5 +9,5 @@ Project developed at one of the hackathon using knowledge, wisdom and ofcourse o
   - [![](https://miro.medium.com/max/776/1*Eb4YFMdn8LJhxjJCuykiLg.png)](https://colab.research.google.com/drive/1vl_-l4S6XmtaTajS7MSH31UHCdkxLMic?usp=sharing)
   
 ### WebApp
-![](https://github.com/vasantvohra/Fingerprint_Recognition/blob/master/FI1.jpeg)
-![](https://github.com/vasantvohra/Fingerprint_Recognition/blob/master/FI2.jpeg)
+![](https://raw.githubusercontent.com/vasantvohra/Fingerprint_Recognition/master/FI1.jpeg)
+![](https://raw.githubusercontent.com/vasantvohra/Fingerprint_Recognition/master/FI2.jpeg)

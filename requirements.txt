@@ -1,7 +1,7 @@
 gunicorn
 numpy
 pandas
-opencv-contrib-python==3.4.1.15
+opencv-contrib-python==3.4.7.28
 opencv-python==3.4.1.15
 scikit-image==0.16.2
 requests==2.23.0
